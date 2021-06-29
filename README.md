@@ -1,5 +1,13 @@
 # Dependency Parsing as Sequence Labeling with BERT
 
+This code is a fork of the https://github.com/mstrise/dep2label-bert project, which enables finetuning BERT models on dependency parsing task as sequence labeling. We have edited the code to bring it up to date with newer versions of huggingface library, and to enable the use of RoBERTa-based models in training the dependency parser.
+
+To aid in the training of the dependency parser, we have created three scripts, which need to be run in order. First, preprocess the data by running `stage-encode.sh`, which should be edited to point to the correct file paths. Then train the parser by fine-tuning the BERT/RoBERTa-based model with `stage-train.sh`. Finally, evaluate the parser by running `stage-eval.sh`.
+
+The original README file follows below.
+
+------------------------------------------
+
 This is the source code for the paper "A Unifying Theory of Transition-based and Sequence Labeling Parsing" accepted at COLING2020:
 
 ### Overview of the Encoding Family for Dependency Parsing in SL
